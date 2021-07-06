@@ -18,14 +18,14 @@ print("-----------------------------------------------------------------")
 print("Scrape & Parse Islemleri")
 print("-----------------------------------------------------------------")
 
-robot_url = (url + "/robots.txt")
+robot_url = (url + "/robots.txt") # scraping islemi baslangici 
 
 #print(robot_url)
 
-def get_page(robot_url):
+def get_page(robot_url): # robots.txt sayfasına ulasma
 
     response = urllib.request.urlopen(urllib.request.Request(robot_url, headers={'User-Agent': 'Mozilla'}))
-    soup = BeautifulSoup(response,'html.parser', from_encoding=response.info().get_param('charset'))
+    soup = BeautifulSoup(response,'html.parser', from_encoding=response.info().get_param('charset')) # Beautiful Soup ile ayiklama
     
     return soup
 
