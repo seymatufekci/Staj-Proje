@@ -1,4 +1,4 @@
-# Staj-Proje
+# Web Scraper & robots.txt Parser
 
 Merhaba; geliştirdiğim bu araç, sızma testlerinde kullanılabilir olup web sitelerini taramaktadır. 
 Bu araç ile URL üzerinden web sitelerinin HTML kodlarını tarayarak yorum satırlarına ulaşılabilmektedir. Böylece yorum satırlarında unutulmuş ve zafiyet oluşturabilecek metinler görülebilmektedir. Ayrıca uygulama, kullanıcının girdiği URL'nin Wayback Machine'deki kayıtlarına ulaşarak onlarda da tarama yapabilmektedir.
