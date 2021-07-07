@@ -68,7 +68,7 @@ class Comment():
                     print("Ulasilan en eski URL: ",oldest_archive_url)
                     print("-----------------------------------------------------------------")
 
-                    page = requests.get(oldest_archive_url, verify=ssl.CERT_NONE)
+                    page = requests.get(oldest_archive_url) # SSL hatasi gelirse:  verify=ssl.CERT_NONE ekle.
                     soup = BeautifulSoup(page.content, 'html.parser')
                     comments = soup.find_all(string=lambda text: isinstance(text, Comment))
                     for c in comments:
@@ -82,7 +82,7 @@ class Comment():
                     print("Ulasilan en yeni URL: ",newest_archive_url)
                     print("-----------------------------------------------------------------")
 
-                    page = requests.get(newest_archive_url, verify=ssl.CERT_NONE)
+                    page = requests.get(newest_archive_url)
                     soup = BeautifulSoup(page.content, 'html.parser')
                     comments = soup.find_all(string=lambda text: isinstance(text, Comment))
                     for c in comments:
@@ -125,7 +125,7 @@ class Comment():
                     print("Wayback URL:  ", target_near)
                     print("-----------------------------------------------------------------")
 
-                    page = requests.get(target_near, verify=ssl.CERT_NONE)
+                    page = requests.get(target_near)
                     soup = BeautifulSoup(page.content, 'html.parser') 
 
                     comments = soup.find_all(string=lambda text: isinstance(text, Comment))
